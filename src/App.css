@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+.title{
+  width: 100%;
+  padding: 10px;
+  background: #61dafb;  
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
