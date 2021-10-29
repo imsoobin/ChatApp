@@ -17,11 +17,11 @@ export default function AppProvider({ children }) {
     }
   }, [uid])
   const rooms = UserFireStore('rooms', roomsCondition)
-  
+
   const selectedRoom = React.useMemo(
     () => rooms.find((room) => room.id === selectedRoomId) || {},
     [rooms, selectedRoomId])
-  
+
   const usersCondition = React.useMemo(() => {
     return {
       fieldName: 'uid',
@@ -31,7 +31,7 @@ export default function AppProvider({ children }) {
   }, [selectedRoom.members])
 
   const members = UserFireStore('users', usersCondition)
- 
+
   return (
     <AppContext.Provider value={{
       rooms,
