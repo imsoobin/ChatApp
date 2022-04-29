@@ -122,7 +122,7 @@ export default function ChatWindows() {
 
   const messageRef = useRef(null)
   const scrollToBottom = () => {
-    messageRef.current?.scrollIntoView({ behavior: "smooth" })
+    messageRef.current?.scrollIntoView({behavior: "smooth"})
   }
   useEffect(() => {
     scrollToBottom()
